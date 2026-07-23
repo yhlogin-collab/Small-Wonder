@@ -157,7 +157,7 @@
   .section-head p{color:var(--ink-soft);margin-top:.7rem;font-size:1.08rem;font-weight:600}
 
   /* ---------- AUDIENCE TILES ---------- */
-  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
   .tile{
     position:relative;background:#fff;border:2px solid var(--line);border-radius:22px;
     padding:1.7rem 1.3rem 1.6rem;transition:transform .18s ease,box-shadow .2s ease;overflow:hidden;
@@ -167,7 +167,8 @@
   .tile .ico-wrap{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:1rem}
   .tile .ico{width:32px;height:32px}
   .tile h3{font-size:1.32rem;font-weight:600}
-  .tile p{font-size:.94rem;color:var(--ink-soft);margin:.4rem 0 1rem;font-weight:600}
+  .tile p{font-size:.94rem;color:var(--ink-soft);margin:.4rem 0 .8rem;font-weight:600}
+  .tile .kinds{font-size:.78rem;font-weight:700;color:var(--ink-soft);opacity:.82;line-height:1.45;margin:0 0 1rem}
   .tile .more{font-family:"Fredoka",sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.01em}
   .tile .more::after{content:" →";transition:margin .15s ease;display:inline-block}
   .tile:hover .more::after{margin-left:5px}
@@ -266,7 +267,7 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:900px){
-    .tiles{grid-template-columns:1fr 1fr}
+    .tiles{grid-template-columns:1fr}
     .steps{grid-template-columns:1fr;gap:1.4rem}
     .shows{grid-template-columns:1fr}
   }
@@ -364,30 +365,26 @@
         <div class="bar"></div>
         <div class="ico-wrap"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#2FA69A" stroke-width="2.6" stroke-linecap="round"><circle cx="24" cy="24" r="8"/><path d="M24 6v5M24 37v5M6 24h5M37 24h5M11 11l3.5 3.5M33.5 33.5 37 37M37 11l-3.5 3.5M14.5 33.5 11 37"/></svg></div>
         <h3>Summer Camps</h3>
-        <p>Our biggest season. A big, high-energy show that fills a hall of excited campers.</p>
+        <p>Our biggest season — a big, high-energy show that fills a hall of excited campers.</p>
+        <div class="kinds">Day camps · Indoor or outdoor · Any group size</div>
         <span class="more">See camp details</span>
       </a>
       <a class="tile schools" href="#">
         <div class="bar"></div>
         <div class="ico-wrap"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#3FA7D6" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><path d="M6 16 24 8l18 8-18 8z"/><path d="M12 20v9c0 2 5.4 5 12 5s12-3 12-5v-9"/><path d="M42 16v9"/></svg></div>
-        <h3>Schools &amp; Orgs</h3>
-        <p>Year-round assemblies and events, from pre-school through the early grades.</p>
+        <h3>Schools &amp; Organizations</h3>
+        <p>Year-round assemblies and holiday programming, from pre-school through the early grades.</p>
+        <div class="kinds">Assemblies · Chanukah &amp; Purim programs · Shul &amp; org events</div>
         <span class="more">See school details</span>
       </a>
       <a class="tile parties" href="#">
         <div class="bar"></div>
         <span class="ribbon">Popular</span>
         <div class="ico-wrap"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#E14B3B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 42V24h28v18z"/><path d="M8 24h32"/><path d="M24 24V14"/><circle cx="24" cy="10" r="3"/><path d="M17 42v-8M31 42v-8"/></svg></div>
-        <h3>Birthday Parties</h3>
-        <p>Make it the party they'll be talking about for weeks — a live puppet show, right at your celebration.</p>
+        <h3>Family Parties</h3>
+        <p>Birthday parties are our specialty — the celebration they'll talk about for weeks, with the puppet show right where you're gathering.</p>
+        <div class="kinds">Birthday parties · Chanukah parties · Upsherins · Simchas</div>
         <span class="more">See party details</span>
-      </a>
-      <a class="tile chanukah" href="#">
-        <div class="bar"></div>
-        <div class="ico-wrap"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#DD9E2A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 12v26M14 18v20M34 18v20M8 26v12M40 26v12M6 40h36"/><path d="M24 6c1.6 1.6 1.6 3.4 0 5-1.6-1.6-1.6-3.4 0-5z" fill="#F5B63F" stroke="none"/></svg></div>
-        <h3>Chanukah</h3>
-        <p>The season we're booked solid. Chabad houses, schools, and family parties.</p>
-        <span class="more">See Chanukah details</span>
       </a>
     </div>
   </div>
