@@ -42,6 +42,33 @@
     go(0); reset();
   }
 
+  /* ---------- Click-to-play video facade ----------
+     A .videocard[data-yt] shows a poster + play button; the real
+     YouTube embed (privacy-mode, no related-video clutter via rel=0)
+     loads only when the visitor clicks, so the page stays fast and
+     nothing loads from YouTube until asked.                          */
+  document.querySelectorAll('.videocard[data-yt]').forEach(function (card) {
+    var id = card.getAttribute('data-yt');
+    function play() {
+      if (card.classList.contains('playing')) return;
+      var f = document.createElement('iframe');
+      f.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen');
+      f.setAttribute('allowfullscreen', '');
+      f.setAttribute('title', 'Small Wonder Puppet Theater — promo reel');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id +
+        '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+      card.classList.add('playing');
+      card.appendChild(f);
+    }
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', 'Play the Small Wonder promo video');
+    card.addEventListener('click', play);
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+    });
+  });
+
   /* ---------- Booking form (low-effort inquiry) ----------
      Any <form data-book> is enhanced here. It submits to Web3Forms
      (works on any static host, incl. Cloudflare Pages) and, on success,

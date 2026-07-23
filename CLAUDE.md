@@ -71,7 +71,8 @@ The form posts to **Web3Forms** (chosen because it works on Cloudflare Pages, th
 
 ## Content status
 - **Real:** contact info, show lengths, positioning, seasons.
-- **Placeholder (owner to supply):** sizzle-reel video; per-setting photos/clips; real testimonials; the "where we've been" list; the camps/schools/shuls count.
+- **Hero reel — LIVE:** YouTube-unlisted promo `9ojQ0W3WSJo`, embedded as a **click-to-play facade** on both the home and Family Parties heroes (`.videocard[data-yt]` in `assets/js/site.js`; privacy-mode `youtube-nocookie` + `rel=0`, so nothing loads from YouTube until clicked and no third-party related videos show). Poster = `assets/images/hero-reel-poster.jpg`, a low-res (480×270) "hands-up" crowd frame pulled from the reel — **swap for a higher-res still when available.** The source `.mov` is only 480p; a higher-res master would let the reel/poster go bigger.
+- **Placeholder (owner to supply):** per-setting photos/clips (Drive folder is blocked by this environment's egress policy — deliver via chat file attachment, not Drive links); real testimonials; the "where we've been" list; the camps/schools/shuls count.
 
 ## Parked / future
 - **"Visualize it for your group"** scenario-picker: tap a scenario → see the recommended show, group size, space needed, a photo of that setting, and a booking CTA pre-tagged to that segment. Parked until real per-setting media exists; could later replace the static audience tiles.

@@ -134,6 +134,16 @@ a{color:inherit;text-decoration:none}
   font-size:.92rem;padding:.5rem 1rem;border-radius:999px;transform:rotate(6deg);
   box-shadow:0 8px 18px -8px rgba(122,42,36,.6);border:3px solid #fff;
 }
+/* click-to-play video facade (real embed loads only on click) */
+.videocard[data-yt]{cursor:pointer}
+.videocard .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.videocard[data-yt]::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(20,8,10,.2),rgba(20,8,10,.5))}
+.videocard .play,.videocard .ph{position:relative;z-index:2}
+.videocard:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.videocard.playing::after{display:none}
+.videocard.playing iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
+.videocard.playing .poster,.videocard.playing .play,.videocard.playing .ph,.videocard.playing .sticker{display:none}
 
 /* ---------- TRUST BAR ---------- */
 .trust{background:var(--sun);color:var(--brick)}
