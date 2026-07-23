@@ -6,269 +6,282 @@
 <title>Small Wonder Puppet Theater — Puppet shows for camps, schools & parties</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FBF4E6;
-    --paper-2:#F3E9D2;
-    --ink:#241A1D;
-    --ink-soft:#5A4A4E;
-    --curtain:#7A1F2B;
-    --curtain-deep:#5A141F;
-    --stage:#331019;
-    --stage-2:#25101A;
-    --gold:#E5A93C;
-    --gold-deep:#C6852A;
-    --teal:#2E6A62;
-    --blue:#34566B;
-    --line:rgba(36,26,29,.14);
-    --shadow:0 18px 40px -20px rgba(36,16,20,.45);
+    --paper:#FFF6E8;
+    --paper-2:#FBEBCF;
+    --ink:#2B2326;
+    --ink-soft:#6A585C;
+    --red:#E14B3B;
+    --red-deep:#C23A2C;
+    --brick:#7A2A24;
+    --sun:#F5B63F;
+    --sun-deep:#DD9E2A;
+    --teal:#2FA69A;
+    --teal-deep:#22807A;
+    --sky:#3FA7D6;
+    --grape:#8367C7;
+    --line:rgba(43,35,38,.12);
+    --shadow:0 20px 44px -22px rgba(74,26,20,.4);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:"Mulish",system-ui,sans-serif;
+    font-family:"Nunito",system-ui,sans-serif;
     background:var(--paper);
     color:var(--ink);
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
-  h1,h2,h3,.display{font-family:"Fraunces",Georgia,serif;line-height:1.05;letter-spacing:-.01em}
+  h1,h2,h3,.display{font-family:"Fredoka","Nunito",sans-serif;line-height:1.04;letter-spacing:-.005em;font-weight:600}
   a{color:inherit;text-decoration:none}
   .wrap{width:min(1140px,92vw);margin-inline:auto}
   .eyebrow{
-    font-family:"Mulish",sans-serif;font-weight:800;font-size:.72rem;
-    letter-spacing:.22em;text-transform:uppercase;
+    font-family:"Nunito",sans-serif;font-weight:800;font-size:.74rem;
+    letter-spacing:.16em;text-transform:uppercase;
+  }
+  /* squiggle underline for a hand-drawn, non-generic accent */
+  .squiggle{position:relative;white-space:nowrap}
+  .squiggle::after{
+    content:"";position:absolute;left:-2%;right:-2%;bottom:-.14em;height:.34em;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'><path d='M2 8 Q 15 2 30 7 T 60 7 T 90 7 T 118 6' fill='none' stroke='%23F5B63F' stroke-width='4' stroke-linecap='round'/></svg>") no-repeat center/100% 100%;
+    z-index:-1;
   }
 
   /* ---------- NAV ---------- */
   .nav{
     position:sticky;top:0;z-index:50;
-    background:rgba(251,244,230,.92);backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
+    background:rgba(255,246,232,.9);backdrop-filter:blur(8px);
+    border-bottom:2px solid rgba(43,35,38,.06);
   }
-  .nav-inner{display:flex;align-items:center;gap:1.5rem;height:74px}
-  .brand{display:flex;flex-direction:column;line-height:1.05;margin-right:auto}
-  .brand .name{font-family:"Fraunces",serif;font-weight:900;font-size:1.16rem;color:var(--curtain)}
-  .brand .sub{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
-  .nav-links{display:flex;gap:1.6rem;align-items:center}
-  .nav-links a{font-weight:600;font-size:.95rem;color:var(--ink);position:relative;padding:.2rem 0}
-  .nav-links a:hover{color:var(--curtain)}
-  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--gold);transition:width .22s ease}
+  .nav-inner{display:flex;align-items:center;gap:1.5rem;height:76px}
+  .brand{display:flex;align-items:center;gap:.6rem;margin-right:auto}
+  .brand .blob{width:38px;height:38px;flex:0 0 auto;background:var(--red);border-radius:46% 54% 58% 42%/54% 46% 54% 46%;display:grid;place-items:center;transform:rotate(-6deg)}
+  .brand .blob::after{content:"";width:13px;height:13px;background:var(--sun);border-radius:50%;box-shadow:0 0 0 4px rgba(245,182,63,.35)}
+  .brand .txt{display:flex;flex-direction:column;line-height:1.02}
+  .brand .name{font-family:"Fredoka",sans-serif;font-weight:600;font-size:1.2rem;color:var(--red)}
+  .brand .sub{font-size:.62rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+  .nav-links{display:flex;gap:1.5rem;align-items:center}
+  .nav-links a{font-weight:700;font-size:.96rem;color:var(--ink);position:relative;padding:.2rem 0}
+  .nav-links a:hover{color:var(--red)}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-3px;height:3px;width:0;background:var(--sun);border-radius:3px;transition:width .22s ease}
   .nav-links a:hover::after{width:100%}
   .btn{
-    display:inline-block;font-family:"Mulish",sans-serif;font-weight:800;
-    border-radius:999px;padding:.72rem 1.4rem;font-size:.95rem;cursor:pointer;
+    display:inline-block;font-family:"Fredoka",sans-serif;font-weight:600;
+    border-radius:999px;padding:.7rem 1.5rem;font-size:1rem;cursor:pointer;
     border:2px solid transparent;transition:transform .15s ease,box-shadow .2s ease,background .2s ease;
   }
-  .btn-book{background:var(--gold);color:var(--stage);box-shadow:0 6px 0 var(--gold-deep)}
-  .btn-book:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--gold-deep)}
-  .btn-book:active{transform:translateY(2px);box-shadow:0 2px 0 var(--gold-deep)}
-  .btn-ghost{background:transparent;color:var(--paper);border-color:rgba(251,244,230,.55)}
-  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-  .btn-solid-dark{background:var(--curtain);color:var(--paper)}
-  .btn-solid-dark:hover{transform:translateY(-2px);background:var(--curtain-deep)}
+  .btn-book{background:var(--sun);color:var(--brick);box-shadow:0 5px 0 var(--sun-deep)}
+  .btn-book:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--sun-deep)}
+  .btn-book:active{transform:translateY(3px);box-shadow:0 2px 0 var(--sun-deep)}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 5px 0 var(--red-deep)}
+  .btn-red:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--red-deep)}
+  .btn-red:active{transform:translateY(3px);box-shadow:0 2px 0 var(--red-deep)}
+  .btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--sun);color:var(--red);transform:translateY(-2px)}
   .hamburger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
-  .hamburger span{width:24px;height:2px;background:var(--ink);display:block;border-radius:2px}
+  .hamburger span{width:24px;height:3px;background:var(--ink);display:block;border-radius:3px}
 
-  /* ---------- HERO / STAGE ---------- */
+  /* ---------- HERO ---------- */
   .hero{
     position:relative;overflow:hidden;
     background:
-      radial-gradient(120% 90% at 50% 118%, rgba(229,169,60,.34), rgba(229,169,60,0) 55%),
-      linear-gradient(180deg,var(--stage) 0%,var(--stage-2) 100%);
-    color:var(--paper);padding:3.4rem 0 4.2rem;
+      radial-gradient(120% 92% at 50% -8%, #FFE6A6 0%, rgba(255,230,166,0) 58%),
+      linear-gradient(180deg,#FFEFCF 0%,var(--paper) 78%);
+    padding:3rem 0 4rem;
   }
-  .hero .eyebrow{color:var(--gold)}
-  .hero-head{text-align:center;max-width:820px;margin-inline:auto}
-  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);font-weight:900;margin:.7rem 0 .5rem}
-  .hero h1 em{font-style:italic;color:var(--gold)}
-  .hero p.lede{font-size:clamp(1.02rem,1.6vw,1.22rem);color:rgba(251,244,230,.82);max-width:600px;margin:0 auto 1.6rem}
+  .hero .eyebrow{color:var(--red)}
+  .hero-head{text-align:center;max-width:840px;margin-inline:auto;position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);font-weight:600;margin:.7rem 0 .6rem}
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .hero p.lede{font-size:clamp(1.05rem,1.6vw,1.24rem);color:var(--ink-soft);max-width:600px;margin:0 auto 1.7rem;font-weight:600}
+  .hero-cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;position:relative;z-index:2}
 
-  /* stage frame */
-  .stage-frame{position:relative;width:min(860px,100%);margin:2.2rem auto 0;padding:0 6px}
-  .valance{
-    position:relative;z-index:3;height:54px;
-    background:linear-gradient(180deg,var(--curtain) 0%,var(--curtain-deep) 100%);
-    border-radius:8px 8px 0 0;
-    box-shadow:inset 0 -6px 14px rgba(0,0,0,.35);
-  }
-  .valance::after{ /* scalloped bottom edge */
-    content:"";position:absolute;left:0;right:0;bottom:-17px;height:20px;
-    background:radial-gradient(circle at 18px -2px,var(--curtain-deep) 15px,transparent 16px) repeat-x;
-    background-size:36px 20px;
-  }
-  .screen{
-    position:relative;z-index:1;aspect-ratio:16/9;width:100%;
+  /* floating playful shapes */
+  .confetti{position:absolute;inset:0;z-index:1;pointer-events:none}
+  .confetti i{position:absolute;display:block;opacity:.9;animation:float 6s ease-in-out infinite}
+  .confetti .c1{top:14%;left:7%;width:34px;height:34px;background:var(--teal);border-radius:50%;animation-duration:7s}
+  .confetti .c2{top:26%;right:9%;width:26px;height:26px;background:var(--sky);border-radius:40% 60% 55% 45%/55% 45% 60% 40%;animation-duration:5.5s;animation-delay:.4s}
+  .confetti .c3{top:60%;left:5%;width:22px;height:22px;background:var(--grape);border-radius:50%;animation-duration:6.5s;animation-delay:.8s}
+  .confetti .c4{top:70%;right:6%;width:30px;height:30px;background:var(--sun);border-radius:50%;animation-duration:6s;animation-delay:.2s}
+  .confetti .star{width:0;height:0;background:none}
+  .confetti .s1{top:9%;right:20%;color:var(--sun);animation-duration:5s}
+  .confetti .s2{top:52%;right:14%;color:var(--red);animation-duration:6.8s;animation-delay:.6s}
+  .confetti .s1::after,.confetti .s2::after{content:"✦";position:absolute;font-size:26px;line-height:1;color:inherit}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(8deg)}}
+
+  /* video card (replaces the proscenium stage) */
+  .videocard{
+    position:relative;z-index:2;width:min(780px,100%);margin:2.4rem auto 0;
+    aspect-ratio:16/9;border-radius:26px;overflow:hidden;
     background:
-      repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 5px),
-      linear-gradient(160deg,#1c0c13,#000);
-    border:3px solid var(--gold-deep);border-top:0;
-    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.7rem;
-    box-shadow:inset 0 0 60px rgba(0,0,0,.7);
+      repeating-linear-gradient(125deg,rgba(255,255,255,.05) 0 3px,transparent 3px 8px),
+      linear-gradient(160deg,#2FA69A,#22807A);
+    border:6px solid #fff;box-shadow:var(--shadow);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;
+    transform:rotate(-.6deg);
   }
-  .play{
-    width:76px;height:76px;border-radius:50%;
-    background:var(--gold);display:grid;place-items:center;
-    box-shadow:0 0 0 10px rgba(229,169,60,.18);cursor:pointer;transition:transform .18s ease;
+  .videocard .play{
+    width:82px;height:82px;border-radius:50%;
+    background:var(--sun);display:grid;place-items:center;
+    box-shadow:0 0 0 12px rgba(255,255,255,.22);cursor:pointer;transition:transform .18s ease;
   }
-  .play:hover{transform:scale(1.06)}
-  .play::after{content:"";border-left:22px solid var(--stage);border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:5px}
-  .screen .ph{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(251,244,230,.5)}
-  /* side curtains */
-  .drape{position:absolute;top:0;bottom:0;width:16%;z-index:2;pointer-events:none;
-    background:repeating-linear-gradient(90deg,var(--curtain-deep) 0 10px,var(--curtain) 10px 26px);
-    box-shadow:inset -14px 0 22px rgba(0,0,0,.4);
+  .videocard .play:hover{transform:scale(1.07)}
+  .videocard .play::after{content:"";border-left:24px solid var(--brick);border-top:14px solid transparent;border-bottom:14px solid transparent;margin-left:6px}
+  .videocard .ph{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:rgba(255,255,255,.85)}
+  /* little sticker on the card */
+  .sticker{
+    position:absolute;z-index:3;top:-16px;right:6%;
+    background:var(--red);color:#fff;font-family:"Fredoka",sans-serif;font-weight:600;
+    font-size:.92rem;padding:.5rem 1rem;border-radius:999px;transform:rotate(6deg);
+    box-shadow:0 8px 18px -8px rgba(122,42,36,.6);border:3px solid #fff;
   }
-  .drape.left{left:6px;border-radius:8px 0 0 0;transform-origin:left center}
-  .drape.right{right:6px;transform:scaleX(-1);border-radius:8px 0 0 0;transform-origin:right center}
-  .curtain-anim .drape.left{animation:openL 1.5s cubic-bezier(.5,0,.2,1) .25s both}
-  .curtain-anim .drape.right{animation:openR 1.5s cubic-bezier(.5,0,.2,1) .25s both}
-  @keyframes openL{from{width:50%}to{width:16%}}
-  @keyframes openR{from{width:50%}to{width:16%}}
-  /* footlights */
-  .footlights{position:relative;z-index:4;display:flex;justify-content:center;gap:16px;margin-top:8px}
-  .footlights span{width:12px;height:12px;border-radius:50%;background:var(--gold);
-    box-shadow:0 0 12px 3px rgba(229,169,60,.6)}
-  .hero-cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:2.2rem}
 
   /* ---------- TRUST BAR ---------- */
-  .trust{background:var(--gold);color:var(--ink)}
+  .trust{background:var(--sun);color:var(--brick)}
   .trust-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
-    gap:.6rem 2.2rem;padding:1.15rem 0;text-align:center}
+    gap:.6rem 2.2rem;padding:1.25rem 0;text-align:center}
   .trust .item{display:flex;flex-direction:column}
-  .trust .n{font-family:"Fraunces",serif;font-weight:700;font-size:1.5rem;color:var(--curtain);line-height:1}
-  .trust .l{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.72;margin-top:.25rem}
-  .trust .dot{width:8px;height:8px;border-radius:50%;background:var(--curtain);opacity:.4}
-  .fillnum{background:rgba(122,31,43,.12);border:1px dashed var(--curtain);border-radius:6px;padding:0 .35rem}
+  .trust .n{font-family:"Fredoka",serif;font-weight:600;font-size:1.6rem;color:var(--brick);line-height:1}
+  .trust .l{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;opacity:.72;margin-top:.25rem}
+  .trust .dot{width:9px;height:9px;border-radius:50%;background:var(--red);opacity:.5}
+  .fillnum{background:rgba(225,75,59,.14);border:1px dashed var(--red-deep);border-radius:6px;padding:0 .35rem}
 
   /* ---------- SECTION SHARED ---------- */
   .section{padding:4.4rem 0}
-  .section-head{text-align:center;max-width:640px;margin:0 auto 2.4rem}
-  .section-head .eyebrow{color:var(--gold-deep)}
-  .section-head h2{font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:700;margin-top:.5rem}
-  .section-head p{color:var(--ink-soft);margin-top:.7rem;font-size:1.05rem}
+  .section-head{text-align:center;max-width:660px;margin:0 auto 2.6rem}
+  .section-head .eyebrow{color:var(--teal-deep)}
+  .section-head h2{font-size:clamp(2rem,3.6vw,2.9rem);font-weight:600;margin-top:.5rem}
+  .section-head p{color:var(--ink-soft);margin-top:.7rem;font-size:1.08rem;font-weight:600}
 
   /* ---------- AUDIENCE TILES ---------- */
-  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
   .tile{
-    position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;
-    padding:1.6rem 1.3rem 1.5rem;transition:transform .18s ease,box-shadow .2s ease;overflow:hidden;
+    position:relative;background:#fff;border:2px solid var(--line);border-radius:22px;
+    padding:1.7rem 1.3rem 1.6rem;transition:transform .18s ease,box-shadow .2s ease;overflow:hidden;
   }
-  .tile:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-  .tile .bar{position:absolute;top:0;left:0;right:0;height:5px}
-  .tile .ico{width:46px;height:46px;margin-bottom:.9rem}
-  .tile h3{font-size:1.28rem;font-weight:600}
-  .tile p{font-size:.92rem;color:var(--ink-soft);margin:.4rem 0 1rem}
-  .tile .more{font-weight:800;font-size:.86rem;letter-spacing:.02em}
-  .tile .more::after{content:" →";transition:margin .15s ease}
-  .tile:hover .more::after{margin-left:4px}
-  .tile.camps .bar,.tile.camps .more{color:var(--teal)}.tile.camps .bar{background:var(--teal)}
-  .tile.schools .bar,.tile.schools .more{color:var(--blue)}.tile.schools .bar{background:var(--blue)}
-  .tile.parties .bar,.tile.parties .more{color:var(--curtain)}.tile.parties .bar{background:var(--curtain)}
-  .tile.chanukah .bar,.tile.chanukah .more{color:var(--gold-deep)}.tile.chanukah .bar{background:var(--gold)}
-  .ribbon{position:absolute;top:14px;right:-30px;transform:rotate(45deg);background:var(--curtain);
-    color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.08em;padding:3px 34px;text-transform:uppercase}
+  .tile:hover{transform:translateY(-6px) rotate(-.8deg);box-shadow:var(--shadow)}
+  .tile .bar{position:absolute;top:0;left:0;right:0;height:7px}
+  .tile .ico-wrap{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:1rem}
+  .tile .ico{width:32px;height:32px}
+  .tile h3{font-size:1.32rem;font-weight:600}
+  .tile p{font-size:.94rem;color:var(--ink-soft);margin:.4rem 0 1rem;font-weight:600}
+  .tile .more{font-family:"Fredoka",sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.01em}
+  .tile .more::after{content:" →";transition:margin .15s ease;display:inline-block}
+  .tile:hover .more::after{margin-left:5px}
+  .tile.camps .bar{background:var(--teal)}.tile.camps .more{color:var(--teal-deep)}.tile.camps .ico-wrap{background:rgba(47,166,154,.14)}
+  .tile.schools .bar{background:var(--sky)}.tile.schools .more{color:var(--sky)}.tile.schools .ico-wrap{background:rgba(63,167,214,.14)}
+  .tile.parties .bar{background:var(--red)}.tile.parties .more{color:var(--red)}.tile.parties .ico-wrap{background:rgba(225,75,59,.14)}
+  .tile.chanukah .bar{background:var(--sun)}.tile.chanukah .more{color:var(--sun-deep)}.tile.chanukah .ico-wrap{background:rgba(245,182,63,.18)}
+  .ribbon{position:absolute;top:15px;right:-32px;transform:rotate(45deg);background:var(--red);
+    color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.08em;padding:4px 36px;text-transform:uppercase;z-index:2}
 
   /* ---------- HOW IT WORKS ---------- */
   .how{background:var(--paper-2)}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-bottom:1.6rem}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-bottom:1.8rem}
   .step{text-align:center;padding:0 .5rem}
-  .step .num{font-family:"Fraunces",serif;font-weight:900;font-size:2.6rem;color:var(--gold-deep);line-height:1}
-  .step h3{font-size:1.2rem;font-weight:600;margin:.4rem 0 .3rem}
-  .step p{color:var(--ink-soft);font-size:.94rem}
-  .reassure{text-align:center;color:var(--ink-soft);font-size:.96rem;max-width:620px;margin:0 auto}
+  .step .num{width:64px;height:64px;margin:0 auto .7rem;border-radius:50%;display:grid;place-items:center;
+    font-family:"Fredoka",sans-serif;font-weight:600;font-size:1.9rem;color:#fff;line-height:1}
+  .step:nth-child(1) .num{background:var(--teal)}
+  .step:nth-child(2) .num{background:var(--sky)}
+  .step:nth-child(3) .num{background:var(--red)}
+  .step h3{font-size:1.22rem;font-weight:600;margin:.2rem 0 .3rem}
+  .step p{color:var(--ink-soft);font-size:.96rem;font-weight:600}
+  .reassure{text-align:center;color:var(--ink-soft);font-size:.98rem;max-width:640px;margin:0 auto;font-weight:600}
   .reassure b{color:var(--ink)}
 
   /* ---------- SHOWS ---------- */
-  .shows{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
-  .show{display:flex;gap:1.1rem;align-items:flex-start;background:#fff;border:1px solid var(--line);
-    border-radius:16px;padding:1.5rem}
-  .show .tag{flex:0 0 auto;width:54px;height:54px;border-radius:12px;background:var(--curtain);
-    display:grid;place-items:center;color:var(--gold)}
-  .show h3{font-size:1.3rem;font-weight:600}
-  .show .len{font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep)}
-  .show p{font-size:.93rem;color:var(--ink-soft);margin-top:.35rem}
+  .shows{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+  .show{display:flex;gap:1.1rem;align-items:flex-start;background:#fff;border:2px solid var(--line);
+    border-radius:22px;padding:1.6rem;transition:transform .18s ease,box-shadow .2s ease}
+  .show:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .show .tag{flex:0 0 auto;width:58px;height:58px;border-radius:16px;background:var(--teal);
+    display:grid;place-items:center;color:#fff}
+  .show:nth-child(2) .tag{background:var(--grape)}
+  .show h3{font-size:1.34rem;font-weight:600}
+  .show .len{font-family:"Fredoka",sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sun-deep)}
+  .show p{font-size:.95rem;color:var(--ink-soft);margin-top:.35rem;font-weight:600}
 
   /* ---------- TESTIMONIALS ---------- */
-  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-  .quote{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.6rem;position:relative}
-  .quote::before{content:"\201C";font-family:"Fraunces",serif;font-size:3.4rem;color:var(--gold);
-    position:absolute;top:.2rem;left:1rem;line-height:1}
-  .quote p{font-size:1rem;margin:1.4rem 0 1rem;color:var(--ink)}
-  .quote .who{font-weight:800;font-size:.9rem}
-  .quote .where{font-size:.82rem;color:var(--ink-soft)}
-  .placeholder-tag{display:inline-block;background:var(--paper-2);border:1px dashed var(--gold-deep);
-    color:var(--gold-deep);font-size:.58rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  .quote{background:#fff;border:2px solid var(--line);border-radius:22px;padding:1.7rem;position:relative}
+  .quote::before{content:"\201C";font-family:"Fredoka",serif;font-size:3.6rem;color:var(--sun);
+    position:absolute;top:.1rem;left:1rem;line-height:1}
+  .quote p{font-size:1.02rem;margin:1.5rem 0 1rem;color:var(--ink);font-weight:700}
+  .quote .who{font-family:"Fredoka",sans-serif;font-weight:600;font-size:.95rem}
+  .quote .where{font-size:.84rem;color:var(--ink-soft);font-weight:600}
+  .placeholder-tag{display:inline-block;background:var(--paper-2);border:1px dashed var(--sun-deep);
+    color:var(--sun-deep);font-size:.58rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
     padding:2px 7px;border-radius:5px;margin-bottom:.5rem}
 
-  /* testimonial carousel */
   .tcarousel{position:relative;max-width:760px;margin:0 auto}
   .tviewport{overflow:hidden}
   .ttrack{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
   .tslide{flex:0 0 100%;padding:0 .4rem;display:flex;justify-content:center}
   .tslide .quote{width:100%;max-width:640px;box-shadow:var(--shadow)}
   .tarrow{position:absolute;top:42%;transform:translateY(-50%);z-index:2;
-    width:42px;height:42px;border-radius:50%;border:0;cursor:pointer;
-    background:#fff;color:var(--curtain);font-size:1.5rem;line-height:1;
-    box-shadow:0 6px 16px -6px rgba(36,16,20,.4);transition:transform .15s ease,background .2s ease}
-  .tarrow:hover{background:var(--gold);color:var(--stage)}
+    width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;
+    background:#fff;color:var(--red);font-size:1.6rem;line-height:1;
+    box-shadow:0 6px 16px -6px rgba(74,26,20,.4);transition:transform .15s ease,background .2s ease}
+  .tarrow:hover{background:var(--sun);color:var(--brick);transform:translateY(-50%) scale(1.06)}
   .tarrow.prev{left:-8px}
   .tarrow.next{right:-8px}
-  .tdots{display:flex;gap:.5rem;justify-content:center;margin-top:1.4rem}
-  .tdots button{width:9px;height:9px;border-radius:50%;border:0;cursor:pointer;padding:0;
-    background:rgba(122,31,43,.25);transition:background .2s ease,transform .2s ease}
-  .tdots button.active{background:var(--curtain);transform:scale(1.25)}
+  .tdots{display:flex;gap:.55rem;justify-content:center;margin-top:1.4rem}
+  .tdots button{width:10px;height:10px;border-radius:50%;border:0;cursor:pointer;padding:0;
+    background:rgba(225,75,59,.28);transition:background .2s ease,transform .2s ease}
+  .tdots button.active{background:var(--red);transform:scale(1.3)}
 
-  /* places marquee */
-  .places{margin-top:2.8rem}
-  .places-label{text-align:center;font-weight:800;font-size:.78rem;letter-spacing:.16em;
-    text-transform:uppercase;color:var(--ink-soft);margin-bottom:1rem;
+  .places{margin-top:3rem}
+  .places-label{text-align:center;font-weight:800;font-size:.8rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ink-soft);margin-bottom:1.1rem;
     display:flex;gap:.6rem;align-items:center;justify-content:center;flex-wrap:wrap}
   .marquee{overflow:hidden;
     -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
     mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
   .mtrack{display:inline-flex;gap:.9rem;white-space:nowrap;animation:scroll 26s linear infinite;will-change:transform}
   .marquee:hover .mtrack{animation-play-state:paused}
-  .chip{flex:0 0 auto;background:#fff;border:1px solid var(--line);border-radius:999px;
-    padding:.6rem 1.3rem;font-weight:700;font-size:.92rem;color:var(--curtain)}
+  .chip{flex:0 0 auto;background:#fff;border:2px solid var(--line);border-radius:999px;
+    padding:.6rem 1.3rem;font-family:"Fredoka",sans-serif;font-weight:500;font-size:.92rem;color:var(--teal-deep)}
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* ---------- CLOSING CTA ---------- */
-  .closing{background:var(--teal);color:var(--paper);text-align:center;padding:4rem 0}
-  .closing h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700}
-  .closing p{color:rgba(251,244,230,.82);margin:.7rem auto 1.7rem;max-width:480px}
+  .closing{position:relative;overflow:hidden;background:var(--teal);color:#fff;text-align:center;padding:4.2rem 0}
+  .closing h2{font-size:clamp(2rem,4vw,2.9rem);font-weight:600}
+  .closing p{color:rgba(255,255,255,.9);margin:.7rem auto 1.8rem;max-width:500px;font-weight:600}
   .closing .hero-cta{margin-top:0}
+  .closing .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.5)}
+  .closing .btn-ghost:hover{background:#fff;color:var(--teal-deep);border-color:#fff}
 
   /* ---------- FOOTER ---------- */
-  footer{background:var(--curtain);color:rgba(251,244,230,.72);padding:2.8rem 0 2rem;font-size:.9rem}
+  footer{background:var(--brick);color:rgba(255,246,232,.74);padding:2.8rem 0 2rem;font-size:.92rem}
   .foot-top{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;padding-bottom:1.8rem;
-    border-bottom:1px solid rgba(251,244,230,.14)}
-  .foot-brand .name{font-family:"Fraunces",serif;font-weight:900;font-size:1.2rem;color:var(--paper)}
-  .foot-brand .prod{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-top:.3rem}
-  .foot-col h4{color:var(--paper);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.7rem}
-  .foot-col a{display:block;margin-bottom:.4rem;color:rgba(251,244,230,.72)}
-  .foot-col a:hover{color:var(--gold)}
-  .foot-bottom{padding-top:1.3rem;font-size:.8rem;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between}
+    border-bottom:1px solid rgba(255,246,232,.16)}
+  .foot-brand .name{font-family:"Fredoka",sans-serif;font-weight:600;font-size:1.3rem;color:var(--paper)}
+  .foot-brand .prod{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin-top:.3rem}
+  .foot-col h4{color:var(--paper);font-family:"Fredoka",sans-serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem;font-weight:500}
+  .foot-col a{display:block;margin-bottom:.45rem;color:rgba(255,246,232,.74);font-weight:600}
+  .foot-col a:hover{color:var(--sun)}
+  .foot-bottom{padding-top:1.3rem;font-size:.82rem;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between}
 
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:900px){
     .tiles{grid-template-columns:1fr 1fr}
-    .steps{grid-template-columns:1fr;gap:1.2rem}
-    .quotes{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr;gap:1.4rem}
     .shows{grid-template-columns:1fr}
   }
   @media(max-width:680px){
-    .nav-links{position:absolute;top:74px;left:0;right:0;background:var(--paper);
+    .nav-links{position:absolute;top:76px;left:0;right:0;background:var(--paper);
       flex-direction:column;align-items:flex-start;padding:1rem 4vw 1.4rem;gap:1rem;
-      border-bottom:1px solid var(--line);display:none}
+      border-bottom:2px solid var(--line);display:none}
     .nav-links.open{display:flex}
     .nav-links .btn-book{width:100%;text-align:center}
     .hamburger{display:flex}
     .tiles{grid-template-columns:1fr}
+    .confetti{display:none}
   }
   @media(prefers-reduced-motion:reduce){
-    .curtain-anim .drape.left,.curtain-anim .drape.right{animation:none}
+    .confetti i{animation:none}
     .mtrack{animation:none}
     .ttrack{transition:none}
     *{scroll-behavior:auto}
@@ -281,8 +294,11 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top">
-      <span class="name">Small Wonder Puppet Theater</span>
-      <span class="sub">Bringing Judaism to life</span>
+      <span class="blob"></span>
+      <span class="txt">
+        <span class="name">Small Wonder Puppet Theater</span>
+        <span class="sub">Bringing Judaism to life</span>
+      </span>
     </a>
     <nav class="nav-links" id="menu">
       <a href="#shows">Our Shows</a>
@@ -297,24 +313,23 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
+  <div class="confetti" aria-hidden="true">
+    <i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i>
+    <i class="star s1"></i><i class="star s2"></i>
+  </div>
   <div class="wrap">
     <div class="hero-head">
       <span class="eyebrow">Live puppet shows &middot; since 1978</span>
-      <h1>The puppet show kids <em>don't forget.</em></h1>
+      <h1>The puppet show kids <em class="squiggle">don't forget.</em></h1>
       <p class="lede">For over 45 years, Small Wonder has brought Jewish stories, laughter, and live puppetry to hundreds of thousands of children — at camps, schools, and parties across the community.</p>
     </div>
 
-    <!-- SIGNATURE: proscenium stage -->
-    <div class="stage-frame curtain-anim">
-      <div class="valance"></div>
-      <div class="drape left"></div>
-      <div class="drape right"></div>
-      <div class="screen">
-        <div class="play" role="button" aria-label="Play the sizzle reel"></div>
-        <span class="ph">Sizzle reel goes here</span>
-      </div>
+    <!-- video card -->
+    <div class="videocard">
+      <span class="sticker">Watch the magic! ✨</span>
+      <div class="play" role="button" aria-label="Play the sizzle reel"></div>
+      <span class="ph">Sizzle reel goes here</span>
     </div>
-    <div class="footlights"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
     <div class="hero-cta">
       <a href="#book" class="btn btn-book">Book a show</a>
@@ -347,14 +362,14 @@
     <div class="tiles">
       <a class="tile camps" href="#">
         <div class="bar"></div>
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#2E6A62" stroke-width="2.4" stroke-linecap="round"><circle cx="24" cy="24" r="8"/><path d="M24 6v5M24 37v5M6 24h5M37 24h5M11 11l3.5 3.5M33.5 33.5 37 37M37 11l-3.5 3.5M14.5 33.5 11 37"/></svg>
+        <div class="ico-wrap"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#2FA69A" stroke-width="2.6" stroke-linecap="round"><circle cx="24" cy="24" r="8"/><path d="M24 6v5M24 37v5M6 24h5M37 24h5M11 11l3.5 3.5M33.5 33.5 37 37M37 11l-3.5 3.5M14.5 33.5 11 37"/></svg></div>
         <h3>Summer Camps</h3>
         <p>Our biggest season. A big, high-energy show that fills a hall of excited campers.</p>
         <span class="more">See camp details</span>
       </a>
       <a class="tile schools" href="#">
         <div class="bar"></div>
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#34566B" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M6 16 24 8l18 8-18 8z"/><path d="M12 20v9c0 2 5.4 5 12 5s12-3 12-5v-9"/><path d="M42 16v9"/></svg>
+        <div class="ico-wrap"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#3FA7D6" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><path d="M6 16 24 8l18 8-18 8z"/><path d="M12 20v9c0 2 5.4 5 12 5s12-3 12-5v-9"/><path d="M42 16v9"/></svg></div>
         <h3>Schools &amp; Orgs</h3>
         <p>Year-round assemblies and events, from pre-school through the early grades.</p>
         <span class="more">See school details</span>
@@ -362,14 +377,14 @@
       <a class="tile parties" href="#">
         <div class="bar"></div>
         <span class="ribbon">Popular</span>
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#7A1F2B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 42V24h28v18z"/><path d="M8 24h32"/><path d="M24 24V14"/><circle cx="24" cy="10" r="3"/><path d="M17 42v-8M31 42v-8"/></svg>
+        <div class="ico-wrap"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#E14B3B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 42V24h28v18z"/><path d="M8 24h32"/><path d="M24 24V14"/><circle cx="24" cy="10" r="3"/><path d="M17 42v-8M31 42v-8"/></svg></div>
         <h3>Birthday Parties</h3>
         <p>Make it the party they'll be talking about for weeks — a live puppet show, right at your celebration.</p>
         <span class="more">See party details</span>
       </a>
       <a class="tile chanukah" href="#">
         <div class="bar"></div>
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#C6852A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 12v26M14 18v20M34 18v20M8 26v12M40 26v12M6 40h36"/><path d="M24 6c1.6 1.6 1.6 3.4 0 5-1.6-1.6-1.6-3.4 0-5z" fill="#E5A93C" stroke="none"/></svg>
+        <div class="ico-wrap"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#DD9E2A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 12v26M14 18v20M34 18v20M8 26v12M40 26v12M6 40h36"/><path d="M24 6c1.6 1.6 1.6 3.4 0 5-1.6-1.6-1.6-3.4 0-5z" fill="#F5B63F" stroke="none"/></svg></div>
         <h3>Chanukah</h3>
         <p>The season we're booked solid. Chabad houses, schools, and family parties.</p>
         <span class="more">See Chanukah details</span>
@@ -403,11 +418,11 @@
     </div>
     <div class="shows">
       <div class="show">
-        <div class="tag"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16v11H4z"/><path d="M2 20h20M9 16v4M15 16v4"/></svg></div>
+        <div class="tag"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16v11H4z"/><path d="M2 20h20M9 16v4M15 16v4"/></svg></div>
         <div><span class="len">≈ 45 minutes</span><h3>The Puppet Show</h3><p>Our flagship. Live puppets and actors pull the kids right into the story — an interactive world that transports them somewhere new, scaled to any room.</p></div>
       </div>
       <div class="show">
-        <div class="tag"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="9" r="5"/><path d="M8 9h.01M16 9h.01M9.5 13c1.5 1 3.5 1 5 0M12 14v6M8 20h8"/></svg></div>
+        <div class="tag"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="9" r="5"/><path d="M8 9h.01M16 9h.01M9.5 13c1.5 1 3.5 1 5 0M12 14v6M8 20h8"/></svg></div>
         <div><span class="len">≈ 30 minutes</span><h3>The Ventriloquist Show</h3><p>A funny, fast-paced alternative — a ventriloquist and his cast of characters trading jokes and mischief. A great second option, and a perfect fit for a more intimate crowd.</p></div>
       </div>
     </div>
@@ -423,7 +438,6 @@
       <p>Real testimonials will rotate here — a taste below while we gather yours.</p>
     </div>
 
-    <!-- testimonial carousel -->
     <div class="tcarousel" id="tCarousel">
       <button class="tarrow prev" id="tPrev" aria-label="Previous testimonial">&lsaquo;</button>
       <div class="tviewport">
@@ -458,7 +472,6 @@
       <div class="tdots" id="tDots"></div>
     </div>
 
-    <!-- places marquee -->
     <div class="places">
       <div class="places-label">Where we've been <span class="placeholder-tag">Sample &mdash; your real list goes here</span></div>
       <div class="marquee">

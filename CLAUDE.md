@@ -3,7 +3,7 @@
 Project memory for the site build. Read this first every session.
 
 ## Project
-Consolidate two Wix sites into ONE custom, cheaply-hosted site (moving off Wix, ~$1,200/yr → ~$25–30/yr). Primary domain: **bringthewonder.com**. The approved homepage design lives in `small-wonder-homepage.html` — treat it as the source of truth for look, tokens, and components.
+Consolidate two Wix sites into ONE custom, cheaply-hosted site (moving off Wix, ~$1,200/yr → ~$25–30/yr). Primary domain: **bringthewonder.com**. The approved homepage design lives in `index.html` (the site entry point) — treat it as the source of truth for look, tokens, and components.
 
 ## The business
 Small Wonder Puppet Theater. 100% puppet shows (robotics + silent disco were dropped; robotics may return later). Two products:
@@ -30,13 +30,15 @@ Seasons: Summer = camps (biggest volume). Chanukah = the blitz (dial up seasonal
 ## Contact
 Phone/text **1-805-738-8405** · **info@BringTheWonder.com** · no street address on the site.
 
-## Design system (reuse from `small-wonder-homepage.html`)
-**Fonts:** Fraunces (display, Google Fonts) + Mulish (body).
-**Colors (CSS vars):** `--paper #FBF4E6` · `--paper-2 #F3E9D2` · `--ink #241A1D` · `--ink-soft #5A4A4E` · `--curtain #7A1F2B` · `--curtain-deep #5A141F` · `--stage #331019` · `--stage-2 #25101A` · `--gold #E5A93C` · `--gold-deep #C6852A` · `--teal #2E6A62` · `--blue #34566B`.
-**Rules:** the deep stage tone (`--stage`) is ONLY for the hero stage. Everything else stays light/playful — gold trust bar, teal closing CTA, burgundy footer, white cards on paper.
-**Signature:** proscenium/stage frame around the hero video (velvet curtains + footlights; curtains part on load).
-**Components already built:** sticky nav + mobile hamburger; hero with stage frame + video placeholder; gold stats trust bar; 4 audience tiles (colored top bars, "Popular" ribbon on Parties); 1-2-3 how-it-works; 2 show cards; testimonial carousel (auto 5s, dots, arrows, pause-on-hover); "where we've been" infinite marquee; teal closing CTA; burgundy footer. Respect `prefers-reduced-motion`.
-**Buttons:** pill-shaped; primary = gold with drop-shadow; ghost = light border.
+## Design system (reuse from `index.html`)
+Direction: **bright, playful, PBS-Kids-warm** — NOT moody/theatrical. Rounded, sunny, a little whimsical.
+**Fonts:** Fredoka (display/headings, Google Fonts) + Nunito (body). (Superseded the old Fraunces + Mulish, which read as generic/"AI".)
+**Colors (CSS vars):** `--paper #FFF6E8` · `--paper-2 #FBEBCF` · `--ink #2B2326` · `--ink-soft #6A585C` · `--red #E14B3B` · `--red-deep #C23A2C` · `--brick #7A2A24` · `--sun #F5B63F` · `--sun-deep #DD9E2A` · `--teal #2FA69A` · `--teal-deep #22807A` · `--sky #3FA7D6` · `--grape #8367C7`.
+**Rules:** everything stays light/bright/playful — sunny cream page, gold trust bar, teal closing CTA, deep-brick footer, white rounded cards. Red is the primary brand accent; gold is the primary button. Reserve any single deep block (footer) so the page never goes dark up top.
+**Signature:** the hero video sits in a friendly rounded card (6px white border, slight tilt) with a "Watch the magic!" sticker + big gold play button, over a sunny gradient with floating confetti dots + sparkles. (The old proscenium/velvet-curtain/footlights signature was dropped — too theatrical.)
+**Playful accents:** squiggle underline on a hero keyword; chunky 3D pill buttons (translateY on press); rounded icon chips on tiles; colored number circles in how-it-works; slight card tilt on hover.
+**Components already built:** sticky nav (blob logo mark) + mobile hamburger; bright hero with confetti + rounded video card; gold stats trust bar; 4 audience tiles (colored top bars + icon chips, "Popular" ribbon on Parties); 1-2-3 how-it-works with colored number circles; 2 show cards; testimonial carousel (auto 5s, dots, arrows, pause-on-hover); "where we've been" infinite marquee; teal closing CTA; brick footer. Respect `prefers-reduced-motion`.
+**Buttons:** pill-shaped, chunky 3D drop-shadow; primary = gold; secondary = red; ghost = white with light border.
 
 ## Sitemap / pages
 - **Home** — BUILT (`small-wonder-homepage.html`).
