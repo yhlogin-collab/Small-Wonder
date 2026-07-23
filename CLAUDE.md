@@ -40,15 +40,26 @@ Direction: **bright, playful, PBS-Kids-warm** — NOT moody/theatrical. Rounded,
 **Components already built:** sticky nav (blob logo mark) + mobile hamburger; bright hero with confetti + rounded video card; gold stats trust bar; 3 audience tiles (colored top bars + icon chips + an "includes" subtype line, "Popular" ribbon on Family Parties); 1-2-3 how-it-works with colored number circles; 2 show cards; testimonial carousel (auto 5s, dots, arrows, pause-on-hover); "where we've been" infinite marquee; teal closing CTA; brick footer. Respect `prefers-reduced-motion`.
 **Buttons:** pill-shaped, chunky 3D drop-shadow; primary = gold; secondary = red; ghost = white with light border.
 
+## File structure
+- `index.html` — homepage (site entry point).
+- `parties.html` — Family Parties page.
+- `book.html` — Contact / Book page (the full inquiry form).
+- `assets/css/site.css` — **the single source of truth for the design system** (tokens + every component). All pages link it; do NOT re-inline CSS per page.
+- `assets/js/site.js` — shared behavior: mobile menu, testimonial carousel, and the booking-form handler (any `<form data-book>` is enhanced).
+
 ## Sitemap / pages
-- **Home** — BUILT (`small-wonder-homepage.html`).
+- **Home** — BUILT (`index.html`).
+- **Contact / Book** — BUILT (`book.html`): the universal low-effort inquiry form (event type + date + location + # shows + name/phone/email/notes), instant "we're holding your date" confirmation, click-to-text + call. Reused as an embedded section on other pages.
+- **Family Parties** — BUILT (`parties.html`): growth-target page — hero, "why families love it" feature grid, parent-FAQ reassurance, which-show, party testimonials, and an embedded booking form pre-tagged `segment=Family party`.
 - **Our Shows** — Puppet Show + Ventriloquist Show detail. TODO.
-- **Who It's For** — THREE consolidated audiences: **Summer Camps** (biggest volume) · **Schools & Organizations** (subtypes: assemblies, Chanukah & Purim programs, shul/org events) · **Family Parties** (growth focus + "Popular"; leads with birthday parties, also Chanukah parties, upsherins & other simchas — heaviest testimonials + reassurance). Chanukah is no longer a standalone tile; it lives inside both Schools/Orgs and Family Parties. Seasonal price toggle still belongs on the Family Parties + Chanukah-programming paths. TODO: build the pages.
+- **Who It's For (remaining tiles)** — Summer Camps + Schools & Organizations detail pages. (Audience model = 3 tiles; see Design system. Chanukah lives inside Schools/Orgs + Family Parties, not a standalone tile. Seasonal price toggle belongs on the Family Parties + Chanukah-programming paths.) TODO.
 - **Kids' Corner** — a few free classic videos + full library gated behind an email signup (lead magnet, NO payment). Videos on YouTube-unlisted/Vimeo embeds (do not self-host). This email list doubles as the booking funnel + Chanukah mailing list. TODO.
 - **About** — heritage story (no creator name) + the "where we've been" list. TODO.
-- **Contact / Book** — the inquiry form + click-to-text + call. TODO.
 - **FAQ** — objection handling: ages, group size, space needed, travel, lead time, puppet vs. ventriloquist, indoor/outdoor. TODO.
 - **Redirects:** unclepinchey.com AND the "pinchy" spelling → Kids' Corner.
+
+## Booking form wiring (ACTION NEEDED before go-live)
+The form posts to **Web3Forms** (chosen because it works on Cloudflare Pages, the lead host, with no backend). Each form has a hidden `access_key` set to the placeholder **`YOUR-WEB3FORMS-ACCESS-KEY`** (in `book.html` and `parties.html`). To activate: create a free key at web3forms.com tied to **info@BringTheWonder.com** and replace both placeholders. Until then the form gracefully falls back to a call/text prompt. If you'd rather host on **Netlify**, switch to Netlify Forms instead (add `data-netlify="true"` + a hidden `form-name`, drop the Web3Forms fetch). No public pricing on the form (summer/parties = invite the call).
 
 ## Tech stack (decided)
 - Static, custom-built. Plain HTML/CSS/JS is fine; keep it simple, fast, cheap, minimal dependencies.

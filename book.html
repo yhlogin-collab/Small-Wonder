@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Show — Small Wonder Puppet Theater</title>
+<meta name="description" content="Request a date for a live Small Wonder puppet show — camps, schools, and family parties. Tell us your date and we'll confirm, usually the same day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="blob"></span>
+      <span class="txt">
+        <span class="name">Small Wonder Puppet Theater</span>
+        <span class="sub">Bringing Judaism to life</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="index.html#shows">Our Shows</a>
+      <a href="index.html#audiences">Who It's For</a>
+      <a href="index.html#kids">Kids' Corner</a>
+      <a href="index.html#about">About</a>
+      <a href="book.html" class="btn btn-book">Book a show</a>
+    </nav>
+    <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO (compact) -->
+<section class="hero" id="top">
+  <div class="confetti" aria-hidden="true">
+    <i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i>
+    <i class="star s1"></i><i class="star s2"></i>
+  </div>
+  <div class="wrap">
+    <div class="hero-head">
+      <span class="eyebrow">Book a show</span>
+      <h1>Let's <em class="squiggle">hold your date.</em></h1>
+      <p class="lede">Tell us a little about your event and we'll confirm the details with you — usually the same day. Prefer to talk? Call or text and we'll answer fast.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section">
+  <div class="wrap">
+    <div class="book-grid">
+
+      <!-- Aside: reassurance + fast contact -->
+      <div class="book-aside">
+        <h2>The easy way to book</h2>
+        <p class="lede">One short form. No pressure, no runaround — just tell us the basics and we'll take it from there.</p>
+        <ul class="book-list">
+          <li>We travel to you — camps, schools, backyards, shuls &amp; halls.</li>
+          <li>45+ years and hundreds of thousands of happy kids.</li>
+          <li>The price we quote is the price you pay.</li>
+          <li>We tune every show to your room and your crowd.</li>
+        </ul>
+        <div class="contact-methods">
+          <a href="sms:+18057388405" class="btn btn-red">Text us · fast reply</a>
+          <a href="tel:+18057388405" class="btn btn-ghost">Call 1-805-738-8405</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-wrap">
+        <form data-book class="form-card">
+          <!-- Web3Forms delivery (works on any static host). Paste your access key below. -->
+          <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY">
+          <input type="hidden" name="subject" value="New booking inquiry — Small Wonder Puppet Theater">
+          <input type="hidden" name="from_name" value="Small Wonder website">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+
+          <div class="field">
+            <label for="etype">What kind of event? <span class="req">*</span></label>
+            <select id="etype" name="Event type" required>
+              <option value="">Choose one…</option>
+              <option value="Family party">Family party (birthday, Chanukah, upsheren, simcha)</option>
+              <option value="Summer camp">Summer camp</option>
+              <option value="School or organization">School or organization</option>
+              <option value="Other">Something else</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="edate">Preferred date</label>
+              <input id="edate" type="date" name="Event date">
+            </div>
+            <div class="field">
+              <label for="eshows">How many shows?</label>
+              <select id="eshows" name="Number of shows">
+                <option value="1">1 show</option>
+                <option value="2">2 shows</option>
+                <option value="3+">3 or more</option>
+                <option value="Not sure">Not sure yet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="eloc">Where is it?</label>
+            <input id="eloc" type="text" name="Location" placeholder="City, neighborhood, or venue">
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="ename">Your name <span class="req">*</span></label>
+              <input id="ename" type="text" name="Name" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="ephone">Phone / text <span class="req">*</span></label>
+              <input id="ephone" type="tel" name="Phone" required autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="eemail">Email</label>
+            <input id="eemail" type="email" name="Email" autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="enotes">Anything else? <span style="font-weight:400;color:var(--ink-soft)">(optional)</span></label>
+            <textarea id="enotes" name="Notes" placeholder="Ages, group size, indoor/outdoor, questions…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-book form-submit">Hold my date →</button>
+          <p class="form-note">We'll hold your date and confirm the details with you — usually the same day.</p>
+          <div class="form-error">
+            That didn't send just now. Please call or text <a href="tel:+18057388405">1-805-738-8405</a> and we'll get you right on the calendar.
+          </div>
+        </form>
+
+        <div class="book-success" role="status" aria-live="polite">
+          <div class="big">🎉</div>
+          <h3>We're holding your date!</h3>
+          <p>Thanks — we've got your request and we'll confirm the details shortly, usually the same day.</p>
+          <div class="contact-methods" style="justify-content:center">
+            <a href="sms:+18057388405" class="btn btn-red">Text us now</a>
+            <a href="tel:+18057388405" class="btn btn-ghost">Call 1-805-738-8405</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="name">Small Wonder Puppet Theater</div>
+        <div class="prod">A Wonder Entertainment production</div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="index.html#shows">Our Shows</a>
+        <a href="index.html#audiences">Who It's For</a>
+        <a href="parties.html">Family Parties</a>
+        <a href="index.html#reviews">Kind Words</a>
+      </div>
+      <div class="foot-col">
+        <h4>Book &amp; contact</h4>
+        <a href="tel:+18057388405">1-805-738-8405</a>
+        <a href="mailto:info@BringTheWonder.com">info@BringTheWonder.com</a>
+        <a href="book.html">Request a date</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 1978&ndash;2026 Wonder Entertainment. All rights reserved.</span>
+      <span>We bring the show to you &middot; camps, schools &amp; parties</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
