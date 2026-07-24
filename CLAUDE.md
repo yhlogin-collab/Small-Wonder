@@ -37,13 +37,14 @@ Direction: **bright, playful, PBS-Kids-warm** — NOT moody/theatrical. Rounded,
 **Rules:** everything stays light/bright/playful — sunny cream page, gold trust bar, teal closing CTA, deep-brick footer, white rounded cards. Red is the primary brand accent; gold is the primary button. Reserve any single deep block (footer) so the page never goes dark up top.
 **Signature:** the hero video sits in a friendly rounded card (6px white border, slight tilt) with a "Watch the magic!" sticker + big gold play button, over a sunny gradient with floating confetti dots + sparkles. (The old proscenium/velvet-curtain/footlights signature was dropped — too theatrical.)
 **Playful accents:** squiggle underline on a hero keyword; chunky 3D pill buttons (translateY on press); rounded icon chips on tiles; colored number circles in how-it-works; slight card tilt on hover.
-**Components already built:** sticky nav (blob logo mark) + mobile hamburger; bright hero with confetti + rounded video card; gold stats trust bar; 3 audience tiles (colored top bars + icon chips + an "includes" subtype line, "Popular" ribbon on Family Parties); 1-2-3 how-it-works with colored number circles; 2 show cards; "Meet the cast" masonry photo gallery; testimonial carousel (auto 5s, dots, arrows, pause-on-hover); "where we've been" infinite marquee; teal closing CTA; brick footer. Respect `prefers-reduced-motion`.
+**Components already built:** sticky nav (blob logo mark) + mobile hamburger; bright hero with confetti + rounded video card; gold stats trust bar; 3 audience tiles (colored top bars + icon chips + an "includes" subtype line, "Popular" ribbon on Family Parties); 1-2-3 how-it-works with colored number circles; 2 show cards; testimonial carousel (auto 5s, dots, arrows, pause-on-hover); "where we've been" infinite marquee; teal closing CTA; brick footer. Respect `prefers-reduced-motion`.
 **Buttons:** pill-shaped, chunky 3D drop-shadow; primary = gold; secondary = red; ghost = white with light border.
 
 ## File structure
 - `index.html` — homepage (site entry point).
 - `parties.html` — Family Parties page.
 - `book.html` — Contact / Book page (the full inquiry form).
+- `shows.html` — Our Shows page (two formats + "most popular shows" video-snippet features).
 - `assets/css/site.css` — **the single source of truth for the design system** (tokens + every component). All pages link it; do NOT re-inline CSS per page.
 - `assets/js/site.js` — shared behavior: mobile menu, testimonial carousel, and the booking-form handler (any `<form data-book>` is enhanced).
 
@@ -51,7 +52,7 @@ Direction: **bright, playful, PBS-Kids-warm** — NOT moody/theatrical. Rounded,
 - **Home** — BUILT (`index.html`).
 - **Contact / Book** — BUILT (`book.html`): the universal low-effort inquiry form (event type + date + location + # shows + name/phone/email/notes), instant "we're holding your date" confirmation, click-to-text + call. Reused as an embedded section on other pages.
 - **Family Parties** — BUILT (`parties.html`): growth-target page — hero, "why families love it" feature grid, parent-FAQ reassurance, which-show, party testimonials, and an embedded booking form pre-tagged `segment=Family party`.
-- **Our Shows** — Puppet Show + Ventriloquist Show detail. TODO.
+- **Our Shows** — BUILT (`shows.html`): the two formats (Puppet Show + Ventriloquist) + a "most popular shows" section of alternating **video-snippet + description** features. Titles/descriptions are placeholders and each `.show-feature .videocard` is poster-only until per-show YouTube IDs arrive — add `data-yt="<id>"` to a card to turn on click-to-play. Posters `show-1/2/3` (shepherd scene, two-puppet royal, performer + puppet). The homepage keeps a 2-format teaser (`#shows`); the standalone `cast-*` images are no longer used on any page (owner dropped the cast gallery) but remain available for reuse.
 - **Who It's For (remaining tiles)** — Summer Camps + Schools & Organizations detail pages. (Audience model = 3 tiles; see Design system. Chanukah lives inside Schools/Orgs + Family Parties, not a standalone tile. Seasonal price toggle belongs on the Family Parties + Chanukah-programming paths.) TODO.
 - **Kids' Corner** — a few free classic videos + full library gated behind an email signup (lead magnet, NO payment). Videos on YouTube-unlisted/Vimeo embeds (do not self-host). This email list doubles as the booking funnel + Chanukah mailing list. TODO.
 - **About** — heritage story (no creator name) + the "where we've been" list. TODO.
