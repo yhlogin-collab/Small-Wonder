@@ -1,0 +1,9 @@
+# Cloudflare Workers static-assets config.
+# This site is plain static HTML/CSS/JS — no build step and no server code.
+# `npx wrangler deploy` reads this file and deploys an assets-only Worker
+# that serves the files in this directory as-is.
+name = "small-wonder"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "./"
