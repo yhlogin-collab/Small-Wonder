@@ -65,6 +65,7 @@ a{color:inherit;text-decoration:none}
 .brand .txt{display:flex;flex-direction:column;line-height:1.02}
 .brand .name{font-family:"Fredoka",sans-serif;font-weight:600;font-size:1.2rem;color:var(--red)}
 .brand .sub{font-size:.62rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.brand-logo{height:46px;width:auto;flex:0 0 auto}
 .nav-links{display:flex;gap:1.5rem;align-items:center}
 .nav-links a{font-weight:700;font-size:.96rem;color:var(--ink);position:relative;padding:.2rem 0}
 .nav-links a:hover{color:var(--red)}
@@ -356,6 +357,8 @@ footer{background:var(--brick);color:rgba(255,246,232,.74);padding:2.8rem 0 2rem
   border-bottom:1px solid rgba(255,246,232,.16)}
 .foot-brand .name{font-family:"Fredoka",sans-serif;font-weight:600;font-size:1.3rem;color:var(--paper)}
 .foot-brand .prod{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin-top:.3rem}
+.foot-logo{display:inline-block;background:#fff;border-radius:16px;padding:.75rem .95rem;margin-bottom:1rem}
+.foot-logo img{display:block;width:190px;height:auto}
 .foot-col h4{color:var(--paper);font-family:"Fredoka",sans-serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem;font-weight:500}
 .foot-col a{display:block;margin-bottom:.45rem;color:rgba(255,246,232,.74);font-weight:600}
 .foot-col a:hover{color:var(--sun)}
@@ -376,6 +379,8 @@ footer{background:var(--brick);color:rgba(255,246,232,.74);padding:2.8rem 0 2rem
   .nav-links.open{display:flex}
   .nav-links .btn-book{width:100%;text-align:center}
   .hamburger{display:flex}
+  .brand-logo{height:38px}
+  .brand .name{font-size:1.05rem}
   .tiles{grid-template-columns:1fr}
   .field-row{grid-template-columns:1fr}
   .confetti{display:none}
