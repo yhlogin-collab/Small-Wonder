@@ -6,6 +6,31 @@ to use as per-show snippets on the site and on social. Open this on your phone a
 Gear: **iPhone 17 Pro** (roaming filmer = a family member) + optional second phone on a mini
 tripod as a locked wide "master." Bring a charger and clear storage first.
 
+---
+
+## Simplest version (one phone, no tripod, novice-friendly)
+
+The iPhone shoots great video **automatically** — focus, brightness, stabilization, and sound all
+adjust themselves. Hold it tall, hit record, and you're 90% there. Everything below the line is polish.
+
+**Set up once, at home (~2 min):**
+- [ ] Charge to 100%, bring the cable
+- [ ] Free up space (Settings → General → iPhone Storage; 4K ≈ 400 MB/min)
+- [ ] Settings → Camera → Record Video → **4K at 30 fps**
+- [ ] Settings → Camera → turn on **Grid**
+- [ ] Wipe the lens
+- [ ] Leave ProRes / Cinematic / any pro mode **off** (they're off by default)
+
+**During the show — only 3 things:**
+1. Hold the phone **tall (vertical)**, both hands, elbows tucked in (your "human tripod").
+2. **Film the whole stage** as the default and stay there — wide is home base, you never miss the show.
+3. For a close-up, tap **2x / 3x** above the shutter (or lean in), grab a few seconds, then zoom back to wide.
+
+**Skip live, fix later:** don't fuss with slow-motion or locking exposure during the show — just film
+normal video. Slowing/brightening a clip is a 10-second job in CapCut afterward.
+
+---
+
 ## Camera settings (set once)
 - Shoot **vertical 9:16**, lens wiped clean, **Grid + Level** on (Settings → Camera).
 - **4K / 30fps** for the show. Switch to **Slo-Mo** for reaction shots.
