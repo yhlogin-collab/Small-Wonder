@@ -178,7 +178,7 @@ a{color:inherit;text-decoration:none}
 }
 .tile:hover{transform:translateY(-6px) rotate(-.8deg);box-shadow:var(--shadow)}
 .tile .bar{position:absolute;top:0;left:0;right:0;height:7px;z-index:2}
-.tile-img{margin:-1.7rem -1.3rem 1.1rem;aspect-ratio:4/3;overflow:hidden}
+.tile-img{margin:.2rem 0 1rem;aspect-ratio:16/10;overflow:hidden;border-radius:14px}
 .tile-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
 .tile:hover .tile-img img{transform:scale(1.05)}
 .tile .ico-wrap{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:1rem}
