@@ -14,7 +14,7 @@ Seasons: Summer = camps (biggest volume). Chanukah = the blitz (dial up seasonal
 
 ## Positioning & voice (important)
 - Lead brand is **Small Wonder Puppet Theater**. "Wonder Entertainment" is the parent — footer/legal only.
-- Tagline direction: **"Bringing Judaism to life"** (Jewish holidays & stories come to life).
+- Tagline: **"Bringing Jewish Tradition and Values to life"** (nav sub, site-wide).
 - Appeal to people who've **never heard of the brand** first. **Uncle Pinchy is iykyk only — never headline him.** Let "unclepinchey" search traffic flow to the Kids' Corner videos (SEO).
 - **Accurate claims only:** "hundreds of thousands of children over 45+ years." NOT "a million," NOT "grew up on." (Naming people is now fine — owner lifted the earlier "don't name the creator" rule; the performer/ventriloquist is Yaakov Horowitz.)
 - Keep "since 1978" rare — one hero eyebrow max; don't repeat it across the page.
@@ -38,7 +38,7 @@ Direction: **bright, playful, PBS-Kids-warm** — NOT moody/theatrical. Rounded,
 **Signature:** the hero video sits in a friendly rounded card (6px white border, slight tilt) with a "Watch the magic!" sticker + big gold play button, over a sunny gradient with floating confetti dots + sparkles. (The old proscenium/velvet-curtain/footlights signature was dropped — too theatrical.)
 **Logo & motif:** the Wonder Entertainment logo (royal purple wordmark, gold outline, blue "ENTERTAINMENT", arc of multi-colored **six-pointed Magen David stars**). The site adopts that motif: the hero decorations and the nav brand mark are six-pointed stars (CSS `--star` mask) in the logo colors, and the palette gained `--purple #6E2C9D` / `--purple-deep` / `--green #6FB63C`. The transparent logo PNG (`assets/images/logo.png`) is now placed in the **nav** (left of the "Small Wonder Puppet Theater" wordmark) and the **footer** (on a white chip, since the purple wordmark is low-contrast on the brick footer), on every page.
 **Playful accents:** squiggle underline on a hero keyword; chunky 3D pill buttons (translateY on press); rounded icon chips on tiles; colored number circles in how-it-works; slight card tilt on hover; floating six-pointed stars in the hero.
-**Components already built:** sticky nav (Wonder Entertainment logo + wordmark) + mobile hamburger; bright hero with confetti + rounded video card; gold stats trust bar; 3 audience tiles (photo band + colored top bar + an "includes" subtype line, "Popular" ribbon on Family Parties); 1-2-3 how-it-works with colored number circles; 2 show cards (photo on top + icon + copy); testimonial carousel (auto 5s, dots, arrows, pause-on-hover); "where we've been" infinite marquee; teal closing CTA; brick footer. Respect `prefers-reduced-motion`.
+**Components already built:** sticky nav (Wonder Entertainment logo + wordmark) + mobile hamburger; bright hero with confetti + rounded video card; gold stats trust bar; 3 audience tiles (small contained rounded photo + colored top bar + an "includes" subtype line, "Popular" ribbon on Family Parties); 1-2-3 how-it-works with colored number circles; 2 show cards (photo on top + icon + copy); testimonial carousel (auto 5s, dots, arrows, pause-on-hover); "where we've been" infinite marquee; teal closing CTA; brick footer. Respect `prefers-reduced-motion`.
 **Buttons:** pill-shaped, chunky 3D drop-shadow; primary = gold; secondary = red; ghost = white with light border.
 
 ## File structure
