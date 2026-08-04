@@ -87,6 +87,32 @@ normal video. Slowing/brightening a clip is a 10-second job in CapCut afterward.
 - **Music:** Instagram's in-app music for IG; CapCut royalty-free tracks for the **website** version
   (so no copyright strike on your own site).
 
+## CapCut step by step (ELI5, iPhone)
+
+Works the same on **CapCut online** (capcut.com in a browser) — often easier on a big screen. Only the
+layout differs: clips sit on a **timeline across the bottom**, tools live in the **top toolbar + side panel**
+(instead of along the bottom). You **Upload** clips and drag them onto the timeline; everything else below is
+the same. Free web export goes up to **1080p** (plenty); ignore anything marked **Pro** — you don't need it.
+
+You can't break anything — there's always an **undo arrow (↩)** at the top.
+
+1. Install **CapCut** (free) → open → **New Project**.
+2. Tap your best 3–5 clips (in rough order) → **Add**. Now you see a clip strip (timeline) + a preview.
+3. **Make it tall:** tap **Ratio → 9:16**. If a clip doesn't fill the screen, pinch it bigger in the preview.
+4. **Trim (80% of the work):** tap a clip → drag its end handles inward so each clip is just **2–4s** of the good moment.
+   - Cut from the middle: move the white line → **Split** → tap the bad piece → **Delete**. When unsure, go **shorter**.
+5. **Best bit first:** press-and-hold a clip → drag to reorder. Funniest/cutest moment = clip #1 (the hook).
+6. **Captions (watch-muted):** **Text → Auto Captions** → fix any wrong words → pick a bold style.
+   - Title: **Text → Add Text** → e.g. `The Cow That Kept Shabbos 🐄` → drag to top, make it big.
+7. **Music:** **Audio → Sounds** → add an upbeat track → tap it → **Volume ~30%** (still hear the puppets/kids).
+   - ⚠️ For **Instagram**, add the song **inside Instagram** instead (licensed). CapCut music = **website only**.
+8. **Optional:** slow a reaction — tap clip → **Speed** → below 1x (0.5x). Transition — tap the □ between clips → simple **fade**.
+9. **End card:** text on the last clip → `Book your show → BringTheWonder.com`.
+10. **Export:** arrow (top-right) → **1080p / 30fps** → **Export** → saves to camera roll.
+
+**In one breath:** best moment first → trim tight → captions on → quiet happy music → name + website at
+the end → keep it **15–25s**. Over 30s? Cut more.
+
 ## Where clips end up
 - Finished clips host on **Vimeo** (per the frum-clientele call), embedded per show on `shows.html`.
 - The show cards will switch to a **vertical player** once the first clips land.
